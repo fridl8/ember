@@ -1,5 +1,8 @@
 <article>
-  <img src={{rental.image}} alt="">
+  <a class="image {{if isWide "wide"}}" role="button">
+    <img src={{rental.image}} alt="">
+      <small>View Larger</small>
+  </a>
   <div class="details">
     <h3>{{rental.title}}</h3>
     <div class="detail owner">
