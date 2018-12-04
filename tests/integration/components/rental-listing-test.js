@@ -25,5 +25,10 @@ module('Integration | Component | rental-listing', function(hooks) {
 
   test('should toggle wide class on click', async function(assert) {
     await render(hbs`{{rental-listing rental=rental}}`)
+    assert.notOk(this.element.querySelector('.image.wide'), 'initially rendered small');
+    await click('.image');
+    assert.ok(this.element.querySelector('.image.wide'), 'rendered wide after click');
+    await click('.image');
+    assert.notOk(this.element.querySelector('.image.wide'), 'rendered small after second click');
   });
 });
