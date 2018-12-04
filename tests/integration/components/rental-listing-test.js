@@ -18,10 +18,10 @@ module('Integration | Component | rental-listing', function(hooks) {
   });
 
   test('should display rental details', async function(assert) {
-
+    await render(hbs`{{rental-listing rental=rental}}`);
   });
 
   test('should toggle wide class on click', async function(assert) {
-
+    await render(hbs`{{rental-listing rental=rental}}`)
   });
 });
