@@ -6,21 +6,11 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | rental-listing', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('should display rental details', async function(assert) {
 
-    await render(hbs`{{rental-listing}}`);
+  });
 
-    assert.equal(this.element.textContent.trim(), '');
+  test('should toggle wide class on click', async function(assert) {
 
-    // Template block usage:
-    await render(hbs`
-      {{#rental-listing}}
-        template block text
-      {{/rental-listing}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
