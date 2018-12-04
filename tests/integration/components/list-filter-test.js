@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, settled } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { resolve } from 'rsvp';
 
@@ -29,5 +29,9 @@ module('Integration | Component | list-filter', function(hooks) {
           </ul>
         {{/list-filter}}
       `);
+    return settled().then(() => {
+      assert.equal(this.element.querySelectorAll('.city').length, 3);
+      assert.equal(this.element.querySelector('.city').textContent.trim(), 'San Francisco');
+    });
   });
 });
