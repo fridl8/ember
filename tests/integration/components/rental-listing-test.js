@@ -6,6 +6,17 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | rental-listing', function(hooks) {
   setupRenderingTest(hooks);
 
+  hooks.beforeEach(function () {
+    this.rental = {
+      image: 'fake.png',
+      title: 'test-tile',
+      owner: 'test-owner',
+      type: 'test-type',
+      city: 'test-city',
+      bedrooms: 3
+    };
+  });
+
   test('should display rental details', async function(assert) {
 
   });
