@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 import { camelize } from '@ember/string';
 import { set } from '@ember/object';
-import { inject as service } from 'ember/service';
+import { inject as service } from '@ember/service';
 
 export default Service.extend({
   geocode: service(),
